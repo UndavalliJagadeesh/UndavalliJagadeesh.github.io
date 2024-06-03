@@ -1,0 +1,285 @@
+body {
+	font-family: "Roboto Slab", serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+	background-color: #f4f4f4;
+	color: #333;
+	margin: 0;
+	padding: 0;
+	text-align: justify;
+}
+
+header {
+	background-color: #000;
+	color: #fff;
+	padding: 1em;
+	text-align: center;
+	position: relative;
+}
+
+header {
+	background-color: #000;
+	color: #fff;
+	padding: 1em;
+	text-align: center;
+	position: sticky;
+	top: 0;
+	z-index: 1000;
+}
+
+.clock {
+	position: absolute;
+	top: 1em;
+	right: 1em;
+	font-size: 1.5em;
+	font-family: "DotGothic16", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+.container {
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 2em;
+}
+
+.section {
+	margin-bottom: 2em;
+}
+
+.section h2 {
+	border-bottom: 2px solid #333;
+	padding-bottom: 0.5em;
+}
+
+.about-me {
+	display: flex;
+	align-items: center;
+	margin-bottom: 2em;
+	line-height: 1.6;
+}
+
+.about-me img {
+	border-radius: 8px;
+	margin-left: 2em;
+	max-width: 300px;
+	max-height: 300px;
+}
+
+.projects {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2em;
+}
+
+.project-tile {
+	background-color: #fff;
+	border: 1px solid #ddd;
+	border-radius: 8px;
+	padding: 1em;
+	flex: 1 1 calc(33% - 2em);
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	display: flex;
+	flex-direction: column;
+	cursor: pointer;
+	transition: transform 0.3s;
+}
+
+.project-tile:hover {
+	transform: scale(1.05);
+}
+
+.project-tile img {
+	max-width: 100%;
+	border-radius: 8px;
+}
+
+.project-tile h3 {
+	margin-top: 1em;
+}
+
+.project-tile p,
+.project-tile ul,
+.links {
+	display: none;
+}
+
+.project-tile.expanded p,
+.project-tile.expanded ul,
+.project-tile.expanded .links {
+	display: block;
+}
+
+.links {
+	display: flex;
+	gap: 1em;
+	margin-top: 1em;
+}
+
+.links a {
+	display: inline-block;
+	padding: 0.5em 1em;
+	background-color: #ccc;
+	color: #333;
+	text-decoration: none;
+	border-radius: 4px;
+	transition: background-color 0.3s;
+}
+
+.links a:hover {
+	background-color: #bbb;
+}
+
+.education {
+	display: flex;
+	flex-direction: column;
+	gap: 2em;
+}
+
+.education-tile {
+	background-color: #fff;
+	border: 1px solid #ddd;
+	border-radius: 8px;
+	padding: 1em;
+	width: 100%;
+	max-width: 800px;
+	margin: 0 auto;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	transition: transform 0.3s;
+}
+
+.education-tile:nth-child(1) {
+	animation: slideInLeft 1s ease-out;
+	flex-direction: row-reverse;
+}
+
+.education-tile:nth-child(2) {
+	animation: slideInRight 1.25s ease-out;
+}
+
+.education-tile:nth-child(3) {
+	animation: slideInLeft 1.5s ease-out;
+	flex-direction: row-reverse;
+}
+
+.education-tile:hover {
+	transform: scale(1.05);
+}
+
+.education-tile img {
+	max-width: 100px;
+	max-height: 100px;
+	border-radius: 8px;
+	margin: 0 1em;
+}
+
+.education-content {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5em;
+	flex: 1;
+}
+
+.education-content div {
+	display: flex;
+	justify-content: space-between;
+}
+
+.connect {
+	display: flex;
+	justify-content: center;
+	gap: 1em;
+	margin-top: 2em;
+}
+
+.connect a {
+	display: block;
+	width: 100px;
+	height: 100px;
+	border-radius: 8px;
+	overflow: hidden;
+	transition: transform 0.3s;
+}
+
+.connect a:hover {
+	transform: scale(1.1);
+}
+
+.connect img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+@keyframes slideInLeft {
+	from {
+		transform: translateX(-100%);
+		opacity: 0;
+	}
+
+	to {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+@keyframes slideInRight {
+	from {
+		transform: translateX(100%);
+		opacity: 0;
+	}
+
+	to {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+@media (max-width: 768px) {
+	.project-tile {
+		flex: 1 1 calc(50% - 2em);
+	}
+
+	.education-tile {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.about-me {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.about-me img {
+		margin-left: 0;
+		margin-top: 1em;
+	}
+
+	.clock {
+		top: 0.5em;
+		right: 0.5em;
+		font-size: 1em;
+	}
+
+}
+
+@media (max-width: 480px) {
+
+	.project-tile,
+	.education-tile {
+		flex: 1 1 100%;
+	}
+
+	.connect a {
+		width: 40px;
+		height: 40px;
+	}
+
+	header {
+		position: relative;
+	}
+}

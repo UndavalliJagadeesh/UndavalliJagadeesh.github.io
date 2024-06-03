@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jagadeesh Undavalli</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Roboto+Slab&display=swap"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
+    <script src="script.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <h1 class="header-title">Jagadeesh Undavalli</h1>
+      <sup><h3>{ Software Developer }</h3></sup>
+      <div class="clock" id="clock"></div>
+    </header>
+    <div class="container">
+      <div class="section" id="about-me">
+        <h2>About Me</h2>
+        <div class="about-me">
+          <div>
+            <p>
+              Hello! I'm Jagadeesh Undavalli, currently an intern at Persistent
+              Systems. I hold a Bachelor of Technology in Computer Science and
+              Engineering from Vishnu Institute of Technology, Bhimavaram,
+              Andhra Pradesh. My expertise lies in Java, Python, SQL, MongoDB,
+              and Machine Learning.
+            </p>
+            <p>
+              Throughout my academic and professional journey, I have worked on
+              various projects that have honed my skills in software development
+              and data science. I am passionate about leveraging technology to
+              solve real-world problems and continuously strive to expand my
+              knowledge and capabilities.
+            </p>
+          </div>
+          <img
+            src="/assets/img/dp.jpeg"
+            alt="Jagadeesh Undavalli"
+          />
+        </div>
+      </div>
+      <div class="section" id="education">
+        <h2>Education</h2>
+        <div class="education">
+          <div class="education-tile">
+            <div class="education-content">
+              <div>
+                <span><strong>Bachelor of Technology</strong></span>
+                <span>2020-2024</span>
+              </div>
+              <div>
+                <span
+                  >Vishnu Institute of Technology, Bhimavaram, Andhra
+                  Pradesh</span
+                >
+                <span>CGPA: 9.21</span>
+              </div>
+            </div>
+            <img
+              src="/assets/img/vitb.png"
+              alt="Vishnu Institute of Technology"
+            />
+          </div>
+          <div class="education-tile">
+            <img
+              src="/assets/img/narayana 10.38.42.png"
+              alt="Narayana Junior College"
+            />
+            <div class="education-content">
+              <div>
+                <span><strong>Intermediate</strong></span>
+                <span>2018-2020</span>
+              </div>
+              <div>
+                <span>Narayana Junior College, Vijayawada, Andhra Pradesh</span>
+                <span>Percentage: 96.3%</span>
+              </div>
+            </div>
+          </div>
+          <div class="education-tile">
+            <div class="education-content">
+              <div>
+                <span><strong>High School (Class X)</strong></span>
+                <span>2017-2018</span>
+              </div>
+              <div>
+                <span>Nirmala High School, Vijayawada, Andhra Pradesh</span>
+                <span>GPA: 9.8</span>
+              </div>
+            </div>
+            <img
+              src="/assets/img/nhs.png"
+              alt="Nirmala High School"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="section" id="portfolio">
+        <h2>Projects</h2>
+        <div class="projects">
+          <div class="project-tile" onclick="toggleDetails(this)">
+            <img
+              src="/assets/img/student_dropout.avif"
+              alt="Prediction of Student Dropouts"
+            />
+            <h3>Prediction of Student Dropouts</h3>
+            <p>
+              <strong>Theme:</strong> Facilitate faculty in predicting student
+              dropouts from their education.
+            </p>
+            <p><strong>Project Components:</strong></p>
+            <ul>
+              <li>
+                Data Collection: Data gathered from government webpages and
+                GitHub repositories.
+              </li>
+              <li>
+                Machine Learning Classifiers: Six diverse machine learning
+                classifiers were developed and tested on the collected data.
+              </li>
+              <li>
+                Performance: RandomForestClassifier demonstrated superior
+                accuracy and F1Score among the classifiers.
+              </li>
+              <li>
+                Deployment: Utilized Streamlit as the frontend to deploy the
+                project on the cloud for enhanced usability and accessibility.
+              </li>
+            </ul>
+            <div class="links">
+              <a
+                href="https://github.com/UndavalliJagadeesh/Student_Dropout_Prediction"
+                >Source Code</a
+              >
+              <a
+                href="https://huggingface.co/spaces/jagadeeshundavalli/Student_Dropout_Prediciton"
+                >Deployment</a
+              >
+            </div>
+          </div>
+          <div class="project-tile" onclick="toggleDetails(this)">
+            <img
+              src="/assets/img/autonomus.webp"
+              alt="Anonymous Vehicle Identification System"
+            />
+            <h3>Anonymous Vehicle Identification System</h3>
+            <p>
+              <strong>Theme:</strong> Utilizes machine learning to identify
+              anonymous vehicles in parking areas.
+            </p>
+            <p><strong>Project Components:</strong></p>
+            <ul>
+              <li>
+                Technology Stack: Employs optical character recognition (OCR)
+                techniques for vehicle registration number extraction from
+                images.
+              </li>
+              <li>
+                Database Integration: Compares extracted numbers against a
+                pre-existing database using pattern recognition algorithms.
+              </li>
+              <li>
+                Fallback Mechanism: In cases of no database match, the system
+                captures an image of the unrecognized vehicle.
+              </li>
+              <li>
+                Administrator Involvement: Sends captured images to
+                administrators for manual verification and further action.
+              </li>
+              <li>
+                Efficiency: Seamlessly combines machine learning and image
+                processing technologies to automate the monitoring and
+                management of anonymous vehicles in parking spaces.
+              </li>
+            </ul>
+            <div class="links">
+              <a
+                href="https://github.com/UndavalliJagadeesh/Vehicle-Plate-Detection"
+                >Source Code</a
+              >
+            </div>
+          </div>
+          <div class="project-tile" onclick="toggleDetails(this)">
+            <img
+              src="/assets/img/dhaan.png"
+              alt="DhaanAPI"
+            />
+            <h3>DhaanAPI</h3>
+            <p>
+              <strong>Theme:</strong> Aims to create a versatile and
+              user-friendly RESTful API using Flask to empower users with
+              efficient database interaction capabilities.
+            </p>
+            <p><strong>Project Components:</strong></p>
+            <ul>
+              <li>Type: RESTful API</li>
+              <li>Technology: Developed using Flask library in Python</li>
+              <li>
+                Description: DhaanAPI is a RESTful API developed using the Flask
+                library in Python. It provides a platform for users to interact
+                with a database, facilitating data retrieval, manipulation, and
+                storage. This API offers a seamless and efficient way to access
+                and manage data resources.
+              </li>
+            </ul>
+            <div class="links">
+              <a href="https://github.com/UndavalliJagadeesh/DhaanAPI"
+                >Source code</a
+              >
+              <a href="https://dhaanapi.onrender.com/">Deployment link 1</a>
+              <a href="https://dhaan-xnar.onrender.com/">Deployment Link 2</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section" id="connect">
+        <h2>Connect</h2>
+        <div class="connect">
+          <a
+            href="https://www.linkedin.com/in/jagadeeshundavalli"
+            target="_blank"
+          >
+            <img
+              src="/assets/img/linkedin.png"
+              alt="LinkedIn"
+            />
+          </a>
+          <a href="mailto:20pa1a05h6@vishnu.edu.in" target="_blank">
+            <img
+              src="/assets/img/gmail.png"
+              alt="Gmail"
+            />
+          </a>
+          <a
+            href="https://www.instagram.com/jagadeesh_undavalli/"
+            target="_blank"
+          >
+            <img
+              src="/assets/img/insta.jpeg"
+              alt="Instagram"
+            />
+          </a>
+          <a href="https://github.com/UndavalliJagadeesh" target="_blank">
+            <img
+              src="/assets/img/github.png"
+              alt="GitHub"
+            />
+          </a>
+          <a
+            href="https://www.facebook.com/jagadeeshundavalli02/"
+            target="_blank"
+          >
+            <img
+              src="/assets/img/facebook.png"
+              alt="Facebook"
+            />
+          </a>
+          <a href="https://x.com/jagadeesh_11" target="_blank">
+            <img
+              src="/assets/img/twitter.png"
+              alt="Twitter"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
