@@ -34,3 +34,13 @@ function updateClock() {
 // calling the functions
     setInterval(updateClock, 1000);
     updateClock();
+
+function showSkills(element) {
+    const skillsContent = element.querySelector('.skills-content');
+    skillsContent.style.display = 'flex';
+}
+
+function hideSkills(element) {
+    const skillsContent = element.querySelector('.skills-content');
+    skillsContent.style.display = 'none';
+}

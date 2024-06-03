@@ -283,3 +283,45 @@ header {
 		position: relative;
 	}
 }
+
+.skills-group {
+    margin-bottom: 2em;
+    cursor: pointer;
+}
+
+.skills-group h3 {
+    margin-bottom: 0.5em;
+    color: #333;
+}
+
+.skills-content {
+    display: none; 
+    margin-top: 1em;
+    gap: 2em;
+    align-items: center;
+}
+
+.skill {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.skill img {
+    width: 40px;
+    height: 40px;
+}
+
+.skill-name {
+    margin-top: 0.5em;
+}
+
+@media (max-width: 768px) {
+    .skills-content {
+        flex-wrap: wrap;
+    }
+
+    .skill {
+        flex-direction: row;
+    }
+}
