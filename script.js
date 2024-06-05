@@ -4,15 +4,17 @@ document.addEventListener('scroll', function () {
   var headerTitle = document.querySelector('.header-title');
   var maxLetterSpacing;
   var sensibility;
+  
   if(window.innerWidth>480 && window.innerWidth<=768){
     maxLetterSpacing = 0.5;
     sensibility = 9000;
-}else if(window.innerWidth>768){
+  }else if(window.innerWidth>768){
     maxLetterSpacing = 0.7;
     sensibility = 4000;
-}
-var spacing = Math.min(maxLetterSpacing, scrollPos / sensibility); 
-headerTitle.style.letterSpacing = spacing + 'em';
+  }
+
+  var spacing = Math.min(maxLetterSpacing, scrollPos / sensibility); 
+  headerTitle.style.letterSpacing = spacing + 'em';
 });
 
 
@@ -25,22 +27,25 @@ function updateClock() {
   document.getElementById('clock').textContent = hours + ':' + minutes + ':' + seconds;
 }
 
+
 // function to display the details of project when clicked
 function toggleDetails(tile) {
   tile.classList.toggle('expanded');
 }
 
 
-// calling the functions
-setInterval(updateClock, 1000);
-updateClock();
-
 function showSkills(element) {
     const skillsContent = element.querySelector('.skills-content');
     skillsContent.style.display = 'flex';
 }
 
+
 function hideSkills(element) {
     const skillsContent = element.querySelector('.skills-content');
     skillsContent.style.display = 'none';
 }
+
+
+// calling the functions
+setInterval(updateClock, 1000);
+updateClock();
