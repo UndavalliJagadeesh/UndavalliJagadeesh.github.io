@@ -323,3 +323,23 @@ header {
 	}
 }
 
+
+footer {
+            background-color: #000;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5em 1em;
+            border: 1px solid #fff;
+            border-radius: 4px;
+            transition: background-color 0.3s, border 0.3s;
+        }
+        footer a:hover {
+            background-color: #fff;
+            color: #000;
+            border-color: #000;
+        }
