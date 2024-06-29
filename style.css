@@ -18,6 +18,13 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
+
+  /* color: #000;
+  background-image: url("/assets/headerBanner.png"); */
+
+  -webkit-backdrop-filter: blur(8px) !important;
+  backdrop-filter: blur(8px) !important;
+  background-color: rgba(40, 41, 41, 0.8) !important;
 }
 
 .clock {

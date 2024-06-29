@@ -30,7 +30,7 @@
         }
 
         .container {
-            max-width: 1000px;
+            max-width: 1100px;
             margin: 0 auto;
             padding: 2em;
         }
@@ -64,7 +64,7 @@
             padding: 1em;
             margin-bottom: 1em;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            transition: background-color 0.3s;
+            transition: transform 0.2s;
         }
 
         .commit:nth-child(odd) {
@@ -78,6 +78,10 @@
         .commit a {
             color: #0366d6;
             text-decoration: none;
+        }
+
+        .commit:hover {
+            transform: scale(1.03);
         }
 
         .commit a:hover {
