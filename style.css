@@ -331,6 +331,7 @@ footer {
   color: #fff;
   padding: 1em;
   text-align: center;
+  padding-bottom: 2rem;
 }
 footer a {
   color: #fff;
@@ -339,6 +340,12 @@ footer a {
   border: 1px solid #fff;
   border-radius: 4px;
   transition: background-color 0.3s, border 0.3s;
+
+  /* Additional */
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  margin: 1rem;
 }
 footer a:hover {
   background-color: #fff;
