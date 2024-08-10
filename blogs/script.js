@@ -1,7 +1,7 @@
 const blogs = [
     {
         title: "Graduation Day",
-        description: "The most awaited moment of my life",
+        description: "The one of the most awaited days of my life............",
         date: "August 11, 2024",
         content: `
             <p>&emsp; Today marks a significant milestone in my life: the Convocation, an event I have eagerly awaited, has finally arrived.
