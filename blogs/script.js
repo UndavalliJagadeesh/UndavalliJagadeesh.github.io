@@ -37,7 +37,7 @@ const blogs = [
             To Vishnu Institute of Technology (Autonomous)  Bhimavaram - Although my B.Tech life may not have unfolded as I had envisioned, you will always hold a special place in my heart.<br/><br/><br/>
             <center style="font-family:sans-serif;">
             Yours Jagadeesh Undavalli<br/>
-            5H6 <br/>
+            #5H6 <br/>
             Sayonara
             </center>
             </p>`,
