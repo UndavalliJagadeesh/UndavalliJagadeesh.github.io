@@ -41,7 +41,7 @@ h1 {
 }
 
 .blog-tile.expanded {
-    max-height: 1000px; /* Adjust to fit full content or set to 'none' for unlimited height */
+    max-height: none; /* Adjust to fit full content or set to 'none' for unlimited height */
 }
 
 .blog-tile:hover {
