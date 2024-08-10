@@ -6,7 +6,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    height: 100vh;
+    /* height: 100vh; */
     flex-direction: column;
 }
 
@@ -41,7 +41,7 @@ h1 {
 }
 
 .blog-tile.expanded {
-    max-height: none; /* Adjust to fit full content or set to 'none' for unlimited height */
+    max-height: fit-content; /* Adjust to fit full content or set to 'none' for unlimited height */
 }
 
 .blog-tile:hover {
