@@ -1,7 +1,7 @@
 const blogs = [
     {
-        title: "Graduation Day",
-        description: "The one of the most awaited days of my life............",
+        title: "Late Night Thoughts - A Special Note",
+        description: "The thought of penning this note came to me in the late hours of 2 AM on April 21, 2024. From that moment, I have eagerly awaited the opportunity to share these sentiments. Now, as this note finally sees the light of day, I am filled with a deep sense of gratitude and fulfillment. Thank you to everyone who has been a part of this incredible journey.",
         date: "August 11, 2024",
         content: `
             <p>&emsp; Today marks a significant milestone in my life: the Convocation, an event I have eagerly awaited, has finally arrived.
@@ -35,6 +35,7 @@ const blogs = [
             &emsp; B.Tech has brought me lifelong friendships, and I am deeply grateful for the selfless support and camaraderie of my friends. I will always cherish the memories we created together.<br/><br/>
 
             To Vishnu Institute of Technology (Autonomous)  Bhimavaram - Although my B.Tech life may not have unfolded as I had envisioned, you will always hold a special place in my heart.<br/><br/><br/>
+
             <center style="font-family:sans-serif;">
             Yours Jagadeesh Undavalli<br/>
             #5H6 <br/>
