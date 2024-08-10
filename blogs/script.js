@@ -34,14 +34,14 @@ const blogs = [
 
             &emsp; B.Tech has brought me lifelong friendships, and I am deeply grateful for the selfless support and camaraderie of my friends. I will always cherish the memories we created together.<br/><br/>
 
-To Vishnu Institute of Technology (Autonomous)  Bhimavaram - Although my B.Tech life may not have unfolded as I had envisioned, you will always hold a special place in my heart.<br/><br/><br/>
-<center style="font-family:sans-serif;">
-Yours Jagadeesh Undavalli<br/>
-5H6 <br/>
-Sayonara
-</center>
-</p>
-        `
+            To Vishnu Institute of Technology (Autonomous)  Bhimavaram - Although my B.Tech life may not have unfolded as I had envisioned, you will always hold a special place in my heart.<br/><br/><br/>
+            <center style="font-family:sans-serif;">
+            Yours Jagadeesh Undavalli<br/>
+            5H6 <br/>
+            Sayonara
+            </center>
+            </p>`,
+        backgroundImage: `assets/img/graduation.png`
     },
     // {
     //     title: "Blog Post 2",
@@ -68,7 +68,13 @@ blogs.forEach(blog => {
         <div class="blog-title">${blog.title}</div>
         <div class="blog-description">${blog.description}</div>
         <div class="blog-date">${blog.date}</div>
-        <div class="blog-content" align="justify">${blog.content}</div>
+        <div class="blog-content" align="justify" style="
+            background-image: url(${blog.backgroundImage});
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: rgba(255,255,255,0.6);
+            background-blend-mode: lighten;
+            background-size: fill;">${blog.content}</div>
         <button class="minimize-button">-</button>
     `;
 
