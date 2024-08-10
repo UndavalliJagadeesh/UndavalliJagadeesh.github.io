@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.container {
+    width: 80%;
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.blog-tiles {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.blog-tile {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.2s, max-height 0.5s ease;
+    text-align: left;
+    overflow: hidden;
+    max-height: 150px; /* Initially showing only a part of the content */
+    cursor: pointer;
+    position: relative;
+}
+
+.blog-tile.expanded {
+    max-height: 1000px; /* Adjust to fit full content or set to 'none' for unlimited height */
+}
+
+.blog-tile:hover {
+    transform: scale(1.05);
+}
+
+.blog-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.blog-description {
+    font-size: 1em;
+    color: #666;
+}
+
+.blog-date {
+    font-size: 0.8em;
+    color: #999;
+    margin-top: 15px;
+}
+
+/* Hide the detailed content initially */
+.blog-content {
+    display: none;
+}
+
+.blog-tile.expanded .blog-content {
+    display: block;
+}
+
+/* Minimize button styling */
+.minimize-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 5px 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: none;
+}
+
+.blog-tile.expanded .minimize-button {
+    display: block;
+}
