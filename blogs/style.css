@@ -91,3 +91,10 @@ h1 {
 .blog-tile.expanded .minimize-button {
     display: block;
 }
+
+@media (max-width: 640px) {
+    .blog-tile{
+        max-height: fit-content;
+    }
+    
+}
