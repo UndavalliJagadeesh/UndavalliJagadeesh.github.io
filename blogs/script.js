@@ -22,7 +22,7 @@ const blogs = [
 
             Dr. Srinivasa Raju Rudraraju (DBMS), Ms. Ravindra Bharathi (OS), Mr. Kali pradeep (Java, DWDM), Mrs. Lakshmi Veenadri (DMS, IOT), Mrs. Parsanthi (SE), Mr. S Mahaboob Hussain (UHV), 
             Mr. Narasimharao (NoSQL), Mrs. Sridevi Bonthu (APPL, FML, DAA), Mrs. Mayuri Kundu (C, Python, FML), Mrs. Vijaya Durga (SPM, STM), Mr. Janardhan Rao (Web Tech), Mr. Shankar Deva (Web Tech), Mrs. Krishna Madurai (CEWS, SA), 
-            Mrs. Preethi Bitra (CO, CN, RPA), Ms. Amulya (DV), Mr. Sujith (DSA, DLD) and my project guide and department PCo Mr. Durga Satish.<br/><br/>
+            Mrs. Preethi Bitra (CO, CN, RPA), Ms. Amulya (DV), Mr. Sujith (DSA, DLD) and my final project guide and department PCo Mr. Durga Satish.<br/><br/>
 
             It has been an honor to be taught by such dedicated faculty members who have always been willing to respond to calls and messages, even during late nights or early mornings. 
             I must also extend my gratitude to the lab assistants and support staff for their kindness in allowing us to use our personal laptops in labs, where we enjoyed coding and learning in comfortable environments(under ACs 😊). 
