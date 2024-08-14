@@ -62,6 +62,7 @@ const blogs = [
 ];
 
 const blogTiles = document.getElementById('blog-tiles');
+const minimizeAllButton = document.getElementById('minimize-all');
 
 blogs.forEach(blog => {
     const blogTile = document.createElement('div');
@@ -97,13 +98,31 @@ blogs.forEach(blog => {
         // blogTile.classList.toggle('expanded');
         blogTile.classList.add('expanded');
         blogTile.style.transform = 'none';
+        checkExpandedTiles();
     });
+
 
     const minimizeButton = blogTile.querySelector('.minimize-button');
     minimizeButton.addEventListener('click', (event) => {
         blogTile.classList.remove('expanded');
-        event.stopPropagation(); // Prevents the tile from expanding again on button click
+        event.stopPropagation();
+        checkExpandedTiles();
     });
 
     blogTiles.appendChild(blogTile);
+});
+
+function checkExpandedTiles() {
+    const expandedTiles = document.querySelectorAll('.blog-tile.expanded');
+    if (expandedTiles.length > 0) {
+        minimizeAllButton.style.display = 'block';
+    } else {
+        minimizeAllButton.style.display = 'none';
+    }
+}
+
+minimizeAllButton.addEventListener('click', () => {
+    const expandedTiles = document.querySelectorAll('.blog-tile.expanded');
+    expandedTiles.forEach(tile => tile.classList.remove('expanded'));
+    minimizeAllButton.style.display = 'none';
 });

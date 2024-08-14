@@ -88,6 +88,25 @@ h1 {
     display: none;
 }
 
+/* Minimize All button styling */
+.minimize-all {
+    position: fixed;
+    /* top: 20px; */
+    right: 140px;
+    padding: 5px 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: none; 
+    z-index: 1000;
+}
+
+.minimize-all:hover {
+    background-color: #555;
+}
+
 .blog-tile.expanded .minimize-button {
     display: block;
 }
@@ -142,12 +161,16 @@ h1 {
 @media (max-width: 640px) {
 
     .container {
-        width: 90%;
+        width: 80%;
         max-width: 100%;
     }
 
     .blog-tile{
         max-height: fit-content;
+    }
+
+    .minimize-all{
+        right: 9px;
     }
 
     .return {
