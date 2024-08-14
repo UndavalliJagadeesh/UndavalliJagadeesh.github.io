@@ -153,13 +153,12 @@ h1 {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* For better handling of horizontal and vertical images */
 .image-grid img.horizontal {
-    grid-column: span 2; /* Span 2 columns for horizontal images */
+    grid-column: span 2; 
 }
 
 .image-grid img.vertical {
-    grid-row: span 2; /* Span 2 rows for vertical images */
+    grid-row: span 2; 
     height: 100%;
 }
 
