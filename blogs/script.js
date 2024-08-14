@@ -58,6 +58,7 @@ const blogs = [
             "https://placehold.co/600x400"
         ]
     },
+
 ];
 
 const blogTiles = document.getElementById('blog-tiles');
