@@ -44,18 +44,59 @@ const blogs = [
             </p>`,
         backgroundImage: `assets/img/graduation.png`,
         images: [
-            "https://placehold.co/600x400",
-            "https://placehold.co/600x400",
-            "https://placehold.co/600x400",
-            "https://placehold.co/600x400",
-            "https://placehold.co/600x400",
-            "https://placehold.co/600x400",
-            "https://placehold.co/600x400",
-            "https://placehold.co/600x400",
-            "https://placehold.co/600x400",
-            "https://placehold.co/600x400",
-            "https://placehold.co/600x400",
-            "https://placehold.co/600x400"
+            {
+                src: "assets/grad/IMG_2640.jpg",
+                orientation: 'horizontal'
+            },
+            {
+                src: "assets/grad/IMG_20240811_133420907.jpg",
+                orientation: 'vertical'
+            },
+            {
+                src: "assets/grad/IMG_20240811_134337888.jpg",
+                orientation: 'vertical'
+            },
+
+            {
+                src: "assets/grad/WhatsApp%20Image%202024-08-11%20at%2017.47.27.jpeg",
+                orientation: 'vertical'
+            },
+            {
+                src: "assets/grad/WhatsApp%20Image%202024-08-11%20at%2017.21.43.jpeg",
+                orientation: 'vertical'
+            },
+            {
+                src: "assets/grad/WhatsApp%20Image%202024-08-14%20at%2012.03.43%20(1).jpeg",
+                orientation: 'horizontal'
+            },
+
+            {
+                src: "assets/grad/IMG_20240813.jpeg",
+                orientation: 'horizontal'
+            },
+
+            {
+                src: "assets/grad/IMG_20240811_133420907.jpg",
+                orientation: 'vertical'
+            },
+            {
+                src: "assets/grad/IMG_20240811_134337888.jpg",
+                orientation: 'vertical'
+            },
+
+            {
+                src: "assets/grad/IMG_20240813.jpeg",
+                orientation: 'horizontal'
+            },
+            {
+                src: "assets/grad/IMG_2640.jpg",
+                orientation: 'horizontal'
+            },
+
+            {
+                src: "assets/grad/IMG_2640.jpg",
+                orientation: 'horizontal'
+            },
         ]
     },
 
@@ -89,7 +130,8 @@ blogs.forEach(blog => {
 
     blog.images.forEach(imageSrc => {
         const imgElement = document.createElement('img');
-        imgElement.src = imageSrc;
+        imgElement.src = imageSrc.src;
+        imgElement.classList.add(imageSrc.orientation);
         imageGrid.appendChild(imgElement);
     });
     blogTile.querySelector('.blog-content').appendChild(imageGrid);
