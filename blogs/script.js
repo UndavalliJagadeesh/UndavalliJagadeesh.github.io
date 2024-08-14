@@ -76,25 +76,25 @@ const blogs = [
             },
 
             {
-                src: "assets/grad/IMG_20240811_133420907.jpg",
+                src: "assets/grad/IMG_20240811_134259022.jpg",
                 orientation: 'vertical'
             },
             {
-                src: "assets/grad/IMG_20240811_134337888.jpg",
+                src: "assets/grad/IMG20240811153031.jpg",
                 orientation: 'vertical'
             },
 
             {
-                src: "assets/grad/IMG_20240813.jpeg",
+                src: "assets/grad/WhatsApp%20Image%202024-08-11%20at%2023.14.08%20(1).jpeg",
                 orientation: 'horizontal'
             },
             {
-                src: "assets/grad/IMG_2640.jpg",
+                src: "assets/grad/IMG20240811142548.jpg",
                 orientation: 'horizontal'
             },
 
             {
-                src: "assets/grad/IMG_2640.jpg",
+                src: "assets/grad/WhatsApp%20Image%202024-08-11%20at%2020.09.12%20(1).jpeg",
                 orientation: 'horizontal'
             },
         ]

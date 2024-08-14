@@ -193,12 +193,40 @@ h1 {
 @media (max-width: 640px) {
 
     .container {
-        width: 80%;
         max-width: 100%;
     }
 
     .blog-tile{
         max-height: fit-content;
+    }
+
+    .image-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    .image-grid img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+    }
+
+    .image-grid img:hover {
+        transform: scale(1.1);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .image-grid img.horizontal {
+        grid-column:auto;
+    }
+    
+    .image-grid img.vertical {
+        grid-row:auto;
+        height: 100%;
     }
 
     .minimize-all{
