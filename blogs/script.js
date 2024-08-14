@@ -42,21 +42,22 @@ const blogs = [
             Sayonara
             </center>
             </p>`,
-        backgroundImage: `assets/img/graduation.png`
+        backgroundImage: `assets/img/graduation.png`,
+        images: [
+            "https://placehold.co/600x400",
+            "https://placehold.co/600x400",
+            "https://placehold.co/600x400",
+            "https://placehold.co/600x400",
+            "https://placehold.co/600x400",
+            "https://placehold.co/600x400",
+            "https://placehold.co/600x400",
+            "https://placehold.co/600x400",
+            "https://placehold.co/600x400",
+            "https://placehold.co/600x400",
+            "https://placehold.co/600x400",
+            "https://placehold.co/600x400"
+        ]
     },
-    // {
-    //     title: "Blog Post 2",
-    //     description: "This is a short description of Blog Post 2.",
-    //     date: "August 11, 2024",
-    //     content: `
-    //         <p>This is the full content of Blog Post 2. It can include text, images, videos, etc.</p>
-    //         <video controls width="100%">
-    //             <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-    //             Your browser does not support the video tag.
-    //         </video>
-    //     `
-    // },
-    // Add more blog objects as needed
 ];
 
 const blogTiles = document.getElementById('blog-tiles');
@@ -69,15 +70,27 @@ blogs.forEach(blog => {
         <div class="blog-title">${blog.title}</div>
         <div class="blog-description">${blog.description}</div>
         <div class="blog-date">${blog.date}</div>
-        <div class="blog-content" align="justify" style="
+        <div class="blog-content">
+        <div class="blog-content-des" align="justify" style="
             background-image: url(${blog.backgroundImage});
             background-position: center;
             background-repeat: no-repeat;
             background-color: rgba(255,255,255,0.6);
             background-blend-mode: lighten;
             background-size: fill;">${blog.content}</div>
+        </div>
         <button class="minimize-button">-</button>
     `;
+
+    const imageGrid = document.createElement('div');
+    imageGrid.classList.add('image-grid');
+
+    blog.images.forEach(imageSrc => {
+        const imgElement = document.createElement('img');
+        imgElement.src = imageSrc;
+        imageGrid.appendChild(imgElement);
+    });
+    blogTile.querySelector('.blog-content').appendChild(imageGrid);
 
     blogTile.addEventListener('click', () => {
         // blogTile.classList.toggle('expanded');
