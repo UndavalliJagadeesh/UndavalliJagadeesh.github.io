@@ -18,7 +18,7 @@ function populateBlogs(blogs) {
         blogTile.classList.add('blog-tile');
 
         blogTile.innerHTML = `
-            <div class="blog-title">${blog.title}</div>
+            <div class="blog-title" style="font-family:Dauphin">${blog.title}</div>
             <div class="blog-description">${blog.description}</div>
             <div class="blog-date">${blog.date}</div>
             <div class="blog-content">
