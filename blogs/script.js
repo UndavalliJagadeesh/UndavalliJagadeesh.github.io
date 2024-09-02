@@ -9,6 +9,7 @@ fetch('blogs/data.json')
   })
   .catch(error => console.error('Error fetching the JSON:', error));
 
+
 function populateBlogs(blogs) {
     const blogTiles = document.getElementById('blog-tiles');
     const minimizeAllButton = document.getElementById('minimize-all');
@@ -73,5 +74,31 @@ function populateBlogs(blogs) {
         const expandedTiles = document.querySelectorAll('.blog-tile.expanded');
         expandedTiles.forEach(tile => tile.classList.remove('expanded'));
         minimizeAllButton.style.display = 'none';
+    });
+
+    setupImagePreview();
+}
+
+function setupImagePreview() {
+    const imageGrid = document.querySelectorAll('.image-grid img');
+    const overlay = document.createElement('div');
+    overlay.classList.add('image-preview-overlay');
+
+    const previewImage = document.createElement('img');
+    overlay.appendChild(previewImage);
+
+    document.body.appendChild(overlay);
+
+    imageGrid.forEach(image => {
+        image.addEventListener('click', (event) => {
+            previewImage.src = event.target.src;
+            overlay.classList.add('visible');
+        });
+    });
+
+    overlay.addEventListener('click', (event) => {
+        if (event.target !== previewImage) {
+            overlay.classList.remove('visible');
+        }
     });
 }
