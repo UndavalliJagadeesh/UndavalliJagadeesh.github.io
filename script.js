@@ -49,3 +49,22 @@ function hideSkills(element) {
 // calling the functions
 setInterval(updateClock, 1000);
 updateClock();
+
+
+// function placeSVGS() {
+//   fetch('assets/svgs.json')
+//   .then(response => response.json())
+//   .then(svgs => {
+//       const container = document.body;
+
+//       svgs.forEach(svgObj => {
+//           const svgElement = document.createElement('div');
+//           svgElement.innerHTML = svgObj.svg;
+//           svgElement.classList.add('svg-container');
+//           svgElement.style.left = `${svgObj.x}px`;
+//           svgElement.style.top = `${svgObj.y}px`;
+//           container.appendChild(svgElement);
+//       });
+//   })
+//   .catch(error => console.error('Error loading SVGs:', error));
+// }
