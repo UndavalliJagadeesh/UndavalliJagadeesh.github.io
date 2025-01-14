@@ -354,26 +354,25 @@ footer a:hover {
 }
 
 
-/* Default: Hide SVGs */
+/* Default: Hide SVGs
 /* .svg-container {
   display: none;
 } */
 
-/* Media Query for Laptop Screens (width > 1024px) */
 /* @media (min-width: 1024px) {
   .svg-container {
       display: block;
       position: absolute;
       top: 0;
       right: 0;
-      width: 3vw; /* 20% of the screen width */
+      width: 3vw; 
       height: 100%;
-      z-index: -1; /* Ensure SVGs are in the background */
-  } */
+      z-index: -1; 
+  } 
 
   /* Specific SVG Positioning */
   /* .svg-container svg {
       position: absolute;
-      /* Position your SVGs based on your layout */
-  } */
-}
+     
+  } 
+} */

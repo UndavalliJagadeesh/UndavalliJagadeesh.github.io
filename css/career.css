@@ -1,0 +1,136 @@
+/* .career-section {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+.career-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-decoration: underline;
+} */
+
+.timeline {
+    position: relative;
+    margin-left: 50px;
+}
+
+.line {
+    position: relative;
+    width: 2px;
+    background-color: black;
+    height: 100%;
+    margin-left: 20px;
+    z-index: 0;
+}
+
+.timeline-item {
+    position: relative;
+    /*   display: flex; */
+    align-items: flex-start;
+    /* Align the tiles and dots at the top */
+    margin-bottom: 40px;
+}
+
+.timeline-item:first-child {
+    margin-top: 40px;
+    /* Adjust this value to lower the first tile and dot */
+}
+
+.timeline-item:first-child .dot {
+    top: 20px;
+    /* Move the dot down along with the tile */
+}
+
+.dot {
+    z-index: 1;
+    left: -8px;
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 999px;
+    border: 3px solid orangered;
+}
+
+.blinking-dot {
+    background-color: red;
+    animation: blink 1s infinite;
+    /* Blinking animation */
+}
+
+.blinking-dot::before,
+.blinking-dot::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 2px;
+    background-color: transparent;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+.blinking-dot::before {
+    top: 0;
+    height: 50%;
+}
+
+.blinking-dot::after {
+    top: 50%;
+    height: 50%;
+}
+
+.tile {
+    margin-left: 40px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    width: 800px;
+    /* height: 70px; */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.tile:hover {
+    transform: scale(1.05);
+}
+
+.tile h3 {
+    /* font-size: 18px; */
+    margin: 0 0 10px 0;
+    font-weight: bolder;
+}
+
+.tile p {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.tile .organization {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin: 5px 0;
+}
+
+.tile .time-period {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0 10px 0;
+}
+
+/* Blinking animation */
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
