@@ -130,6 +130,18 @@ header {
   background-color: #bbb;
 }
 
+.tile div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tile img{
+  width: 10%;
+  height: 10%;
+  border-radius: 20px;
+}
+
+
 .education {
   display: flex;
   flex-direction: column;
