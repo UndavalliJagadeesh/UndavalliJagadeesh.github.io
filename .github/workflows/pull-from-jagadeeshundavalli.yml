@@ -1,0 +1,35 @@
+name: Pull from jagadeeshundavalli main into v2
+
+on:
+  schedule:
+    - cron: '0 * * * *'   # every hour
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout UndavalliJagadeesh.github.io (v2)
+        uses: actions/checkout@v4
+        with:
+          ref: v2
+          fetch-depth: 0
+
+      - name: Configure git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Add jagadeeshundavalli as remote
+        run: |
+          git remote add jagadeeshundavalli https://x-access-token:${{ secrets.REPO_A_TOKEN }}@github.com/ORG_OR_USER/jagadeeshundavalli.git
+
+      - name: Fetch jagadeeshundavalli
+        run: |
+          git fetch jagadeeshundavalli main
+      
+      - name: Merge jagadeeshundavalli main into v2
+        run: |
+          git merge jagadeeshundavalli/main --no-edit
+          git push origin v2
