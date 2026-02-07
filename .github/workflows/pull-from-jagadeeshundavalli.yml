@@ -23,7 +23,7 @@ jobs:
 
       - name: Add jagadeeshundavalli as remote
         run: |
-          git remote add jagadeeshundavalli https://x-access-token:${{ secrets.REPO_A_TOKEN }}@github.com/ORG_OR_USER/jagadeeshundavalli.git
+          git remote add jagadeeshundavalli https://x-access-token:${{ secrets.REPO_A_TOKEN }}@github.com/UndavalliJagadeesh/jagadeeshundavalli.git
 
       - name: Fetch jagadeeshundavalli
         run: |
