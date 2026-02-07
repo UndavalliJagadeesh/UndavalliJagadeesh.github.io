@@ -2,7 +2,7 @@ name: Pull from jagadeeshundavalli main into v2
 
 on:
   schedule:
-    - cron: '0 * * * *'   # every hour
+    - cron: '*/5 * * * *'
   workflow_dispatch:
 
 jobs:
