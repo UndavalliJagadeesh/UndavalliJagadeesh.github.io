@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blogs | Jagadeesh Undavalli</title>
+  <meta name="description"
+    content="Personal blog by Jagadeesh Undavalli — Milestones, moments, and reflections from life and career.">
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="blogs/style.css">
+</head>
+
+<body>
+  <canvas id="stars-canvas"></canvas>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="/">JU</a>
+      <nav class="nav">
+        <a href="/" class="nav-link">← Back to Portfolio</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="blogs-main">
+    <div class="container">
+      <div class="page-hero reveal">
+        <h1 class="page-title fredericka">Milestones &amp; Moments</h1>
+        <p class="page-subtitle">Short blog posts on my career and life</p>
+      </div>
+
+      <div class="blogs-controls">
+        <button id="minimize-all" class="btn-minimize-all" title="Collapse all">
+          <span class="material-icons">unfold_less</span>
+          Collapse All
+        </button>
+      </div>
+
+      <div id="blog-tiles" class="blog-tiles"></div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <p>© <span id="year"></span> Jagadeesh Undavalli — Crafted with <span class="heart-icon"></span> using AI</p>
+        <div class="social-links">
+          <a href="https://github.com/UndavalliJagadeesh" aria-label="GitHub">GitHub</a>
+          <a href="https://www.linkedin.com/in/jagadeeshundavalli" aria-label="LinkedIn">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="blogs/script.js"></script>
+  <script>
+    // Stars canvas (same as main portfolio)
+    const canvas = document.getElementById('stars-canvas');
+    const ctx = canvas.getContext('2d');
+    let stars = [];
+    function resize() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    function createStars(n) {
+      stars = [];
+      for (let i = 0; i < n; i++) {
+        stars.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          r: Math.random() * 1.5 + 0.3,
+          a: Math.random(),
+          da: (Math.random() - 0.5) * 0.005
+        });
+      }
+    }
+    function drawStars() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      stars.forEach(s => {
+        s.a += s.da;
+        if (s.a <= 0 || s.a >= 1) s.da = -s.da;
+        ctx.beginPath();
+        ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(180,220,255,${s.a * 0.7})`;
+        ctx.fill();
+      });
+      requestAnimationFrame(drawStars);
+    }
+    resize();
+    createStars(120);
+    drawStars();
+    window.addEventListener('resize', () => { resize(); createStars(120); });
+
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Scroll reveal
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    reveals.forEach(el => observer.observe(el));
+  </script>
+</body>
+
+</html>
