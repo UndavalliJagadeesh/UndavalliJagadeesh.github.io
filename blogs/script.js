@@ -27,12 +27,7 @@ function populateBlogs(blogs) {
         <span class="material-icons">expand_more</span>Read more
       </span>
       <div class="blog-content">
-        <div class="blog-content-des"
-          style="background-image: url(${blog.backgroundImage});
-                 background-position: center;
-                 background-repeat: no-repeat;
-                 background-size: cover;
-                 background-blend-mode: overlay;">
+        <div class="blog-content-des" data-bg="${blog.backgroundImage}">
           ${blog.content}
         </div>
       </div>
@@ -55,6 +50,14 @@ function populateBlogs(blogs) {
         imgElement.loading = 'lazy';
         imageGrid.appendChild(imgElement);
       });
+    }
+
+    // Set background watermark via CSS custom property (avoids stretching)
+    if (blog.backgroundImage) {
+      const contentDes = blogTile.querySelector('.blog-content-des');
+      if (contentDes) {
+        contentDes.style.setProperty('--blog-bg', `url(${blog.backgroundImage})`);
+      }
     }
 
     blogTile.querySelector('.blog-content').appendChild(imageGrid);

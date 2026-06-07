@@ -11,47 +11,7 @@
         "orientation": "horizontal"
       },
       {
-        "src": "assets/grad/IMG_20240811_133420907.jpg",
-        "orientation": "vertical"
-      },
-      {
-        "src": "assets/grad/IMG_20240811_134337888.jpg",
-        "orientation": "vertical"
-      },
-      {
-        "src": "assets/grad/WhatsApp%20Image%202024-08-11%20at%2017.47.27.jpeg",
-        "orientation": "vertical"
-      },
-      {
-        "src": "assets/grad/WhatsApp%20Image%202024-08-11%20at%2017.21.43.jpeg",
-        "orientation": "vertical"
-      },
-      {
-        "src": "assets/grad/WhatsApp%20Image%202024-08-14%20at%2012.03.43%20(1).jpeg",
-        "orientation": "horizontal"
-      },
-      {
-        "src": "assets/grad/IMG_20240813.jpeg",
-        "orientation": "horizontal"
-      },
-      {
-        "src": "assets/grad/IMG_20240811_134259022.jpg",
-        "orientation": "vertical"
-      },
-      {
-        "src": "assets/grad/IMG20240811153031.jpg",
-        "orientation": "vertical"
-      },
-      {
-        "src": "assets/grad/WhatsApp%20Image%202024-08-11%20at%2023.14.08%20(1).jpeg",
-        "orientation": "horizontal"
-      },
-      {
-        "src": "assets/grad/IMG20240811142548.jpg",
-        "orientation": "horizontal"
-      },
-      {
-        "src": "assets/grad/WhatsApp%20Image%202024-08-11%20at%2020.09.12%20(1).jpeg",
+        "src": "assets/grad/img_2024.jpeg",
         "orientation": "horizontal"
       }
     ]
@@ -61,7 +21,9 @@
     "description": "A glimpse of my first day as a professional software engineer. I'm excited to start this new chapter in my career and can't wait to see what the future holds.",
     "date": "October 7, 2024",
     "backgroundImage": "assets/img/graduation.png",
-    "images": [{}],
+    "images": [
+      {}
+    ],
     "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et tempor libero, vel porttitor turpis. Cras ac ex in lectus tempor bibendum quis in est. Praesent imperdiet bibendum lorem, eget convallis odio egestas id. Maecenas interdum odio non neque tempor tincidunt. Ut semper odio ut turpis imperdiet aliquam. Etiam aliquam malesuada ipsum, at elementum urna pretium nec. Vivamus massa sapien, venenatis ut sodales nec, rutrum sed erat. Fusce egestas dapibus eros, at eleifend eros volutpat eget. Ut viverra diam mauris, auctor consequat est hendrerit in. Vestibulum hendrerit mauris eu neque dignissim, id tristique urna cursus. Etiam aliquet neque non lorem placerat tempor sit amet a risus. Aliquam interdum metus eleifend elementum accumsan. Duis sollicitudin fringilla varius. Morbi eros nunc, pharetra vel nibh non, pharetra ullamcorper quam. Cras consectetur venenatis libero, vel vulputate nisi sodales vel. Sed est justo, tristique tempor varius nec, dictum quis turpis. Sed mollis lobortis augue, in dignissim magna rhoncus posuere. Fusce lobortis nunc eu risus laoreet interdum. Phasellus quis tellus sit amet nulla laoreet pretium. Suspendisse a aliquam metus. Nam id ante non nisi bibendum malesuada eget eu dolor. Proin sollicitudin libero nec consequat imperdiet. Integer a tempor risus. Nam porttitor justo id dolor porta, eu gravida metus condimentum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin maximus varius risus in tristique. Donec placerat vulputate metus eget rhoncus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse potenti. Mauris vulputate porttitor risus, vitae sagittis metus commodo eget. Aenean eu mollis nisi. Ut non nisi risus. In posuere dapibus pretium. Etiam et enim sollicitudin, luctus justo vitae, congue urna. Donec ultricies in nunc eu sagittis. Curabitur hendrerit porta commodo. Nulla facilisi."
   }
 ]
